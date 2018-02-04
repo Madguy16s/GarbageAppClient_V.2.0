@@ -1,6 +1,7 @@
 <resources>
     <string name="scan_barcode_button">My Garbage is Full!</string>
     <string name="no_barcode_captured">No barcode captured</string>
+    <string name="barcode_captured">Garbage will be collected soon!</string>
     <string name="barcode_error_format">"Error reading barcode: %1$s"</string>
     <string name="app_name">GarbageAppClient_V.2.0</string>
     <string name="ok">OK</string>

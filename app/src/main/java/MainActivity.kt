@@ -17,6 +17,8 @@ import com.google.android.gms.vision.barcode.Barcode
 class MainActivity : AppCompatActivity() {
 
     private lateinit var mResultTextView: TextView
+    val coordinate = ""
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,7 +38,8 @@ class MainActivity : AppCompatActivity() {
                 if (data != null) {
                     val barcode = data.getParcelableExtra<Barcode>(BarcodeCaptureActivity.BarcodeObject)
                     val p = barcode.cornerPoints
-                    mResultTextView.text = barcode.displayValue
+                    barcode.displayValue = coordinate
+                    mResultTextView.setText(R.string.barcode_captured)
                 } else
                     mResultTextView.setText(R.string.no_barcode_captured)
             } else
